@@ -1,0 +1,58 @@
+html, body, .titles {
+    height: 100%;
+}
+
+a {
+    border-bottom: 1px solid;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.title-card {
+    background-color: lavender;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+.copy {
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    font-size: 2.2em;
+    font-weight: 100;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.role {
+    display: block;
+    font-family: georgia, times, serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.opener {
+    background-color: #0c0c0a;
+    color: #d8d3d2;
+
+    .role {
+        color: #9d9d9d;
+    }
+}
+
+.director {
+    background-color: #dededd;
+
+}
+
+.photography {
+    background-color: #07060c;
+
+    .role {
+        color: #d8d3d2;
+    }
+}
+
+.twitter {
+    background-color: #fbf7f9;
+
+}

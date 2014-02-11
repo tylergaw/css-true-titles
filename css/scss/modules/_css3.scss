@@ -1,0 +1,20 @@
+@mixin box-sizing ($val) {
+    -moz-box-sizing: $val;
+    box-sizing: $val;
+}
+
+@mixin transition ($val...) {
+    -webkit-transition: $val;
+    transition: $val;
+}
+
+@mixin transform ($val...) {
+    -ms-transform: $val;
+    -webkit-transform: $val;
+    transform: $val;
+}
+
+@mixin animation($val...) {
+    -webkit-animation: $val;
+    animation: $val;
+}
