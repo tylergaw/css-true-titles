@@ -19,7 +19,7 @@ a {
     font-family: "Helvetica Neue", helvetica, arial, sans-serif;
     font-size: 2.2em;
     font-weight: 100;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
 }
 
@@ -31,7 +31,8 @@ a {
 }
 
 .opener {
-    background-color: #0c0c0a;
+    background: #0c0c0a url("../img/opener-bg.jpg") no-repeat;
+    background-size: cover;
     color: #d8d3d2;
 
     .role {
@@ -40,8 +41,17 @@ a {
 }
 
 .director {
-    background-color: #dededd;
+    background: #dededd url("../img/director-bg.jpg") no-repeat;
+    background-size: cover;
+    color: #626963;
 
+    .role {
+        color: #3a3a3a;
+    }
+
+    a {
+        color: #626963;
+    }
 }
 
 .photography {
