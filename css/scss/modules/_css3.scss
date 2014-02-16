@@ -18,3 +18,8 @@
     -webkit-animation: $val;
     animation: $val;
 }
+
+@mixin mask($val...) {
+    -webkit-mask: $val;
+    mask: $val;
+}

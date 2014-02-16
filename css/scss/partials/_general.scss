@@ -12,12 +12,13 @@ a {
     background-color: lavender;
     height: 100%;
     overflow: hidden;
+    position: relative;
     width: 100%;
 }
 
 .copy {
     font-family: "Helvetica Neue", helvetica, arial, sans-serif;
-    font-size: 2.2em;
+    font-size: 2em;
     font-weight: 100;
     letter-spacing: 0.07em;
     position: relative;
@@ -26,6 +27,7 @@ a {
 }
 
 .composition {
+    overflow: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -34,50 +36,9 @@ a {
 .role {
     display: block;
     font-family: georgia, times, serif;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 500;
-}
-
-.opener {
-    background: #0c0c0a url("../img/opener-bg.jpg") no-repeat;
-    background-size: cover;
-    color: #d8d3d2;
-
-    .role {
-        color: #9d9d9d;
-    }
-
-    .human,
-    .town {
-        left: 0;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
-
-    .human {
-        background: transparent url("../img/opener-human.png") no-repeat;
-        opacity: 0.9;
-        background-size: cover;
-    }
-
-    .town {
-        -webkit-animation: tester 8s infinite linear;
-        background: transparent url("../img/opener-town.png") no-repeat;
-        background-size: 150%;
-        opacity: 0.9;
-        -webkit-mask: url("../img/opener-human.png") top left / cover;
-    }
-}
-
-@-webkit-keyframes tester {
-    50% {
-        opacity: 0.6;
-    }
-
-    100% {
-        background-position: -350px -10px;
-    }
+    margin-bottom: 0.5em;
 }
 
 .director {

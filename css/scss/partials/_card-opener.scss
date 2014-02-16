@@ -1,0 +1,120 @@
+.opener {
+    @include animation(opener-bg 10s infinite ease alternate);
+    background: #0c0c0a url("../img/opener-bg.jpg") repeat;
+    background-size: cover;
+    color: #d8d3d2;
+
+    .role {
+        color: #9d9d9d;
+    }
+
+    .composition {
+        @include animation(opener-comp 11s infinite ease alternate);
+        @include transform(translateX(-4%) scale(1));
+    }
+
+    .human,
+    .town {
+        left: 0;
+        min-height: 768px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .human {
+        background: transparent url("../img/opener-human.png") no-repeat;
+        opacity: 0.7;
+        background-size: cover;
+    }
+
+    .town {
+        @include animation(opener-town 11s infinite linear alternate);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image: url("../img/opener-blip.jpg"), url("../img/opener-town.png");
+        background-size: 0, cover;
+        opacity: 0.8;
+        @include mask(url("../img/opener-human.png") top left / cover no-repeat);
+    }
+
+    .copy {
+        @include animation(opener-copy 11s infinite ease alternate);
+        position: absolute;
+        top: 20%;
+        @include transform(translateX(28%) scale(0.9));
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes opener-copy {
+    0%, 100% {
+        opacity: 0;
+    }
+
+    4%, 96% {
+        opacity: 1;
+    }
+
+    30% {
+        @include transform(translateX(39%) scale(1));
+    }
+
+    75% {
+        @include transform(translateX(45%) scale(1.05));
+    }
+
+    100% {
+        @include transform(translateX(28%) scale(0.9));
+    }
+}
+
+@-webkit-keyframes opener-bg {
+    100% {
+        background-position: -50px 0;
+    }
+}
+
+@-webkit-keyframes opener-comp {
+    30% {
+        @include transform(translateX(2%) scale(1.03) skewY(2deg));
+    }
+
+    75% {
+        @include transform(translateX(5%) scale(1.06) skewY(2deg));
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    40.1%, 40.3%, 40.5%  {
+        opacity: 0.1;
+    }
+
+    40.2%, 40.4%, 40.6% {
+        opacity: 1;
+    }
+
+    100% {
+        @include transform(translateX(-4%) scale(1) skewY(-1deg));
+    }
+}
+
+@-webkit-keyframes opener-town {
+    0%, 40%, 41% {
+        background-size: 0, cover;
+    }
+
+    40.1% {
+        background-size: 120%, cover;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        background-position: -300px 0, -350px 0;
+    }
+}
