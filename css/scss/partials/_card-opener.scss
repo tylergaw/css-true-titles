@@ -1,5 +1,4 @@
 .opener {
-    @include animation(opener-bg 10s infinite ease alternate);
     background: #0c0c0a url("../img/opener-bg.jpg") repeat;
     background-size: cover;
     color: #d8d3d2;
@@ -40,7 +39,6 @@
 
     .copy {
         @include animation(opener-copy 11s infinite ease alternate);
-        position: absolute;
         top: 20%;
         @include transform(translateX(28%) scale(0.9));
         width: 100%;
@@ -66,12 +64,6 @@
 
     100% {
         @include transform(translateX(28%) scale(0.9));
-    }
-}
-
-@-webkit-keyframes opener-bg {
-    100% {
-        background-position: -50px 0;
     }
 }
 

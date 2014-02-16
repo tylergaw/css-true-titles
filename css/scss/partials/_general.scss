@@ -1,5 +1,12 @@
+$dev-mode: true;
+
 html, body, .titles {
     height: 100%;
+}
+
+html, body {
+    background: #0c0c0a url("../img/opener-bg.jpg") no-repeat;
+    background-size: cover;
 }
 
 a {
@@ -9,11 +16,59 @@ a {
 }
 
 .title-card {
-    background-color: lavender;
     height: 100%;
     overflow: hidden;
-    position: relative;
+
+    @if not $dev-mode {
+        position: absolute;
+    } @else {
+        position: relative;
+    }
+
     width: 100%;
+}
+
+$duration: 32s;
+$iteration: infinite;
+
+@-webkit-keyframes opener {
+    0%, 24.9% {
+        opacity: 1;
+    }
+
+    25%, 100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes director {
+    0%, 24.9%, 50%, 100% {
+        opacity: 0;
+    }
+
+    25%, 49.9% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes photography {
+    0%, 49.9%, 75%, 100% {
+        opacity: 0;
+    }
+
+    50%, 74.9% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes twitter {
+    0%, 74.9%, 100% {
+        opacity: 0;
+    }
+
+    75%, 99.9% {
+        opacity: 1;
+    }
 }
 
 .copy {
@@ -41,7 +96,17 @@ a {
     margin-bottom: 0.5em;
 }
 
+.opener {
+    @if not $dev-mode {
+        @include animation(opener $duration $iteration);
+    }
+}
+
 .director {
+    @if not $dev-mode {
+        @include animation(director $duration $iteration);
+    }
+
     background: #dededd url("../img/director-bg.jpg") no-repeat;
     background-size: cover;
     color: #626963;
@@ -56,6 +121,10 @@ a {
 }
 
 .photography {
+    @if not $dev-mode {
+        @include animation(photography $duration $iteration);
+    }
+
     background-color: #07060c;
 
     .role {
@@ -64,6 +133,16 @@ a {
 }
 
 .twitter {
-    background-color: #fbf7f9;
+    @if not $dev-mode {
+        @include animation(twitter $duration $iteration);
+    }
 
+    background-color: #fbf7f9;
+}
+
+.paused {
+    .animated,
+    .title-card .animated {
+        animation-play-state: paused;
+    }
 }
