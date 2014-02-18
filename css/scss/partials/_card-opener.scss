@@ -9,7 +9,7 @@
 
     .composition {
         @include animation(opener-comp 11s infinite ease alternate);
-        @include transform(translateX(-4%) scale(1));
+        @include transform(translateX(-4%) scale(1.02));
     }
 
     .human,
@@ -54,28 +54,12 @@
         opacity: 1;
     }
 
-    30% {
-        @include transform(translateX(39%) scale(1));
-    }
-
-    75% {
-        @include transform(translateX(45%) scale(1.05));
-    }
-
     100% {
-        @include transform(translateX(28%) scale(0.9));
+        @include transform(translateX(45%) scale(1.05));
     }
 }
 
 @-webkit-keyframes opener-comp {
-    30% {
-        @include transform(translateX(2%) scale(1.03) skewY(2deg));
-    }
-
-    75% {
-        @include transform(translateX(5%) scale(1.06) skewY(2deg));
-    }
-
     40% {
         opacity: 1;
     }
@@ -89,7 +73,7 @@
     }
 
     100% {
-        @include transform(translateX(-4%) scale(1) skewY(-1deg));
+        @include transform(translateX(5%) scale(1.06) skewY(2deg));
     }
 }
 
