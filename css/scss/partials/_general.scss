@@ -111,12 +111,6 @@ $iteration: infinite;
     @if not $dev-mode {
         @include animation(photography $duration $iteration);
     }
-
-    background-color: #07060c;
-
-    .role {
-        color: #d8d3d2;
-    }
 }
 
 .twitter {
