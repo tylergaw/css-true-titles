@@ -11,6 +11,7 @@
         @include animation(opener-comp 13s infinite ease alternate);
         @include transform(translateX(-4%) scale(1.02));
         @include mask(url("../img/opener-human.png") top left / cover no-repeat);
+        min-height: 768px;
     }
 
     .human,
