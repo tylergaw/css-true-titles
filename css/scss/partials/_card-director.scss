@@ -1,5 +1,5 @@
 .director {
-    $delay: 5s;
+    $delay: 0s;
     background: #dededd url("../img/director-bg.jpg") no-repeat;
     background-size: cover;
     color: #626963;
@@ -10,6 +10,13 @@
 
     a {
         color: #626963;
+    }
+
+    .copy {
+        @include animation(director-copy 17s $delay infinite linear alternate);
+        left: 55%;
+        top: 49%;
+        width: 100%;
     }
 
     .composition {
@@ -49,6 +56,12 @@
         @include animation(director-trees 18s $delay infinite linear);
         background: transparent url("../img/director-trees.png") no-repeat;
         opacity: 0.75;
+    }
+}
+
+@include keyframes (director-copy) {
+    100% {
+        @include transform(translate(10%, 60%) scale(1.2));
     }
 }
 
