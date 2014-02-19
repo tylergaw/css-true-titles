@@ -14,7 +14,7 @@
 
     .copy {
         @include animation(director-copy 17s $delay infinite linear alternate);
-        left: 48%;
+        left: 60vw;
         top: 47%;
         width: 100%;
     }
