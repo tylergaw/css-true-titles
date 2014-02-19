@@ -1,4 +1,4 @@
-$dev-mode: true;
+$dev-mode: false;
 
 html, body, .titles {
     height: 100%;
@@ -95,30 +95,22 @@ $iteration: infinite;
     margin-bottom: 0.5em;
 }
 
-.opener {
-    @if not $dev-mode {
+@if not $dev-mode {
+    .opener {
         @include animation(opener $duration $iteration);
     }
-}
 
-.director {
-    @if not $dev-mode {
+    .director {
         @include animation(director $duration $iteration);
     }
-}
 
-.photography {
-    @if not $dev-mode {
+    .photography {
         @include animation(photography $duration $iteration);
     }
-}
 
-.twitter {
-    @if not $dev-mode {
+    .twitter {
         @include animation(twitter $duration $iteration);
     }
-
-    background-color: #fbf7f9;
 }
 
 .paused {

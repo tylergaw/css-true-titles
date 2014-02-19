@@ -1,0 +1,80 @@
+.twitter {
+    $delay: 20s;
+    background-color: #d7d7da;
+    color: #8a8989;
+
+    a {
+        color: #616d59;
+    }
+
+    .copy {
+        @include animation(twitter-copy 20s $delay infinite ease);
+        opacity: 0;
+        text-align: center;
+        top: 40vh;
+    }
+
+    .sky,
+    .clouds,
+    .ground {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+
+    .sky {
+        @include animation(twitter-sky 20s $delay infinite ease);
+        background: transparent url("../img/twitter-sky.png") no-repeat center top;
+        background-size: cover;
+        max-height: 450px;
+    }
+
+    .clouds {
+        @include animation(twitter-clouds 20s $delay infinite ease);
+        background: transparent url("../img/twitter-clouds.png") no-repeat center top;
+        background-size: 100%;
+        opacity: 0.25;
+        width: 200%;
+    }
+
+    .ground {
+        @include animation(twitter-ground 20s $delay infinite ease);
+        background: transparent url("../img/twitter-ground.png") no-repeat center bottom;
+        background-size: cover;
+        bottom: 0;
+        max-height: 425px;
+    }
+}
+
+@include keyframes (twitter-copy) {
+    15% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        @include transform(translateY(-30px) scale(1.05));
+    }
+}
+
+@include keyframes (twitter-sky) {
+    100% {
+        @include transform(translateY(-25px));
+    }
+}
+
+@include keyframes (twitter-clouds) {
+    100% {
+        @include transform(translate(-150px, -25px));
+    }
+}
+
+@include keyframes (twitter-ground) {
+    100% {
+        @include transform(translateY(45px) scale(1.05));
+    }
+}

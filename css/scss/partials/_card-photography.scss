@@ -1,5 +1,5 @@
 .photography {
-    $delay: 0s;
+    $delay: 14s;
     background-color: #07060c;
     background-size: cover;
     color: #d8d3d2;
@@ -38,7 +38,7 @@
     }
 
     .human {
-        @include animation(photography-human 18s $delay infinite linear);
+        @include animation(photography-human 18s $delay infinite linear alternate);
         background: transparent url("../img/photography-human.png") no-repeat;
         background-size: cover;
         opacity: 0.6;
