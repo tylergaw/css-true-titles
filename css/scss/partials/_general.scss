@@ -31,7 +31,7 @@ a {
 $duration: 32s;
 $iteration: infinite;
 
-@-webkit-keyframes opener {
+@include keyframes (opener) {
     0%, 24.9% {
         opacity: 1;
     }
@@ -41,7 +41,7 @@ $iteration: infinite;
     }
 }
 
-@-webkit-keyframes director {
+@include keyframes (director) {
     0%, 24.9%, 50%, 100% {
         opacity: 0;
     }
@@ -51,7 +51,7 @@ $iteration: infinite;
     }
 }
 
-@-webkit-keyframes photography {
+@include keyframes (photography) {
     0%, 49.9%, 75%, 100% {
         opacity: 0;
     }
@@ -61,7 +61,7 @@ $iteration: infinite;
     }
 }
 
-@-webkit-keyframes twitter {
+@include keyframes (twitter) {
     0%, 74.9%, 100% {
         opacity: 0;
     }
@@ -105,18 +105,6 @@ $iteration: infinite;
 .director {
     @if not $dev-mode {
         @include animation(director $duration $iteration);
-    }
-
-    background: #dededd url("../img/director-bg.jpg") no-repeat;
-    background-size: cover;
-    color: #626963;
-
-    .role {
-        color: #3a3a3a;
-    }
-
-    a {
-        color: #626963;
     }
 }
 

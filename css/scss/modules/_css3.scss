@@ -9,9 +9,13 @@
 }
 
 @mixin transform ($val...) {
-    -ms-transform: $val;
     -webkit-transform: $val;
     transform: $val;
+}
+
+@mixin mask($val...) {
+    -webkit-mask: $val;
+    mask: $val;
 }
 
 @mixin animation($val...) {
@@ -19,7 +23,12 @@
     animation: $val;
 }
 
-@mixin mask($val...) {
-    -webkit-mask: $val;
-    mask: $val;
+@mixin keyframes ($name) {
+    @-webkit-keyframes $name {
+        @content;
+    }
+
+    @keyframes $name {
+        @content;
+    }
 }

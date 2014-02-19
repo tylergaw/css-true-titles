@@ -8,8 +8,9 @@
     }
 
     .composition {
-        @include animation(opener-comp 11s infinite ease alternate);
+        @include animation(opener-comp 13s infinite ease alternate);
         @include transform(translateX(-4%) scale(1.02));
+        @include mask(url("../img/opener-human.png") top left / cover no-repeat);
     }
 
     .human,
@@ -23,29 +24,28 @@
 
     .human {
         background: transparent url("../img/opener-human.png") no-repeat;
-        opacity: 0.7;
+        opacity: 0.8;
         background-size: cover;
     }
 
     .town {
-        @include animation(opener-town 11s infinite linear alternate);
+        @include animation(opener-town 11s infinite linear);
         background-color: transparent;
         background-repeat: no-repeat;
         background-image: url("../img/opener-blip.jpg"), url("../img/opener-town.png");
         background-size: 0, cover;
         opacity: 0.8;
-        @include mask(url("../img/opener-human.png") top left / cover no-repeat);
     }
 
     .copy {
-        @include animation(opener-copy 11s infinite ease alternate);
+        @include animation(opener-copy 13s infinite ease alternate);
         top: 20%;
-        @include transform(translateX(28%) scale(0.9));
+        @include transform(translateX(29%) scale(0.9));
         width: 100%;
     }
 }
 
-@-webkit-keyframes opener-copy {
+@include keyframes (opener-copy) {
     0%, 100% {
         opacity: 0;
     }
@@ -55,11 +55,11 @@
     }
 
     100% {
-        @include transform(translateX(45%) scale(1.05));
+        @include transform(translateX(48%) scale(1.06));
     }
 }
 
-@-webkit-keyframes opener-comp {
+@include keyframes (opener-comp) {
     40% {
         opacity: 1;
     }
@@ -73,11 +73,11 @@
     }
 
     100% {
-        @include transform(translateX(5%) scale(1.06) skewY(2deg));
+        @include transform(translateX(7%) scale(1.08) skewY(2deg));
     }
 }
 
-@-webkit-keyframes opener-town {
+@include keyframes (opener-town) {
     0%, 40%, 41% {
         background-size: 0, cover;
     }
@@ -91,6 +91,6 @@
     }
 
     100% {
-        background-position: -300px 0, -350px 0;
+        @include transform(translateX(-350px));
     }
 }

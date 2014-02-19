@@ -1,0 +1,70 @@
+.director {
+    background: #dededd url("../img/director-bg.jpg") no-repeat;
+    background-size: cover;
+    color: #626963;
+
+    .role {
+        color: #3a3a3a;
+    }
+
+    a {
+        color: #626963;
+    }
+
+    .composition {
+        @include animation(director-comp 17s infinite linear alternate);
+        @include mask(url("../img/director-human.png") top left / cover no-repeat);
+        max-width: 1100px;
+        min-height: 768px;
+    }
+
+    .human,
+    .trees,
+    .street {
+        height: 100%;
+        right: 0;
+        min-height: 768px;
+        position: absolute;
+        width: 100%;
+    }
+
+    .human {
+        background: transparent url("../img/director-human.png") no-repeat;
+        background-size: cover;
+    }
+
+    .street,
+    .trees {
+        background-size: cover;
+    }
+
+    .street {
+        @include animation(director-street 18s infinite linear);
+        background: transparent url("../img/director-street.png") no-repeat -175px 0;
+        opacity: 0.7;
+    }
+
+    .trees {
+        @include animation(director-trees 18s infinite linear);
+        background: transparent url("../img/director-trees.png") no-repeat;
+        opacity: 0.75;
+    }
+}
+
+@include keyframes (director-street) {
+    100% {
+        @include transform(translate(175px, -20px));
+    }
+}
+
+@include keyframes (director-trees) {
+    100% {
+        @include transform(translate(-175px, 10px));
+    }
+}
+
+@include keyframes (director-comp) {
+    100% {
+        @include transform(translateX(-4%) scale(1.2) skewX(3deg));
+    }
+}
