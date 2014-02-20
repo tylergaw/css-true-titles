@@ -21,7 +21,19 @@
         </script>
     -->
     </head>
-    <body>
+    <body class="paused">
+        <div class="controls">
+            <button class="play-toggle" data-alt-text="pause" data=text="play">
+                play
+            </button>
+            <button class="mute-toggle" data-alt-text="unmute" data=text="mute">
+                mute
+            </button>
+            <div class="project-crud">
+                <a href="">info</a>
+                <a href="">source</a>
+            </div>
+        </div>
         <ol class="titles">
             <li class="title-card opener animated">
                 <div class="composition animated">
@@ -52,14 +64,15 @@
                 </h3>
             </li>
             <li class="title-card twitter animated">
-                <div class="sky"></div>
-                <div class="clouds"></div>
-                <div class="ground"></div>
+                <div class="sky animated"></div>
+                <div class="clouds animated"></div>
+                <div class="ground animated"></div>
                 <h3 class="copy animated">
                     <b class="role">Follow</b> <a href="http://twitter.com/thegaw">@thegaw</a>
                 </h3>
             </li>
         </ol>
+        <script src="js/controls.js"></script>
     </body>
 </html>
 
