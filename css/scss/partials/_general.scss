@@ -1,4 +1,4 @@
-$dev-mode: false;
+$dev-mode: true;
 
 html, body, .titles {
     height: 100%;
@@ -30,13 +30,25 @@ a {
     width: 100%;
 }
 
-.first-play {
-    .titles {
-        visibility: hidden;
-    }
+@if $dev-mode {
+    .first-play {
+        .titles {
+            visibility: visible;
+        }
 
-    [role="contentinfo"] {
-        display: block;
+        [role="contentinfo"] {
+            display: none;
+        }
+    }
+} @else {
+    .first-play {
+        .titles {
+            visibility: hidden;
+        }
+
+        [role="contentinfo"] {
+            display: block;
+        }
     }
 }
 
@@ -146,7 +158,7 @@ $iteration: infinite;
 
 .copy {
     font-family: "Helvetica Neue", helvetica, arial, sans-serif;
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: 100;
     letter-spacing: 0.07em;
     position: relative;
@@ -167,6 +179,12 @@ $iteration: infinite;
     font-size: 0.85rem;
     font-weight: 500;
     margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 520px) {
+    .copy {
+        font-size: 2em;
+    }
 }
 
 @if not $dev-mode {

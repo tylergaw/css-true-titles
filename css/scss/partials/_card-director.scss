@@ -23,7 +23,6 @@
         @include animation(director-comp 17s $delay infinite linear alternate);
         @include mask(url("../img/director-human.png") top left / cover no-repeat);
         max-width: 1100px;
-        min-height: 768px;
     }
 
     .human,
@@ -31,7 +30,6 @@
     .street {
         height: 100%;
         right: 0;
-        min-height: 768px;
         position: absolute;
         width: 100%;
     }
