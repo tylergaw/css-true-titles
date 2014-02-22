@@ -2,6 +2,8 @@
 
 A title sequence made with CSS in the style of the [True Detective opening](http://youtu.be/ZRPpCqXYoos).
 
+[http://lab.tylergaw.com/css-true-titles/](http://lab.tylergaw.com/css-true-titles)
+
 ![Image showing the title cards](https://raw.github.com/tylergaw/css-true-titles/master/img/true-titles-tiles.jpg)
 
 ## Problems
