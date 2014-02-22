@@ -54,12 +54,12 @@ a {
     }
 
     header {
+        color: #000;
         margin-bottom: 2em;
         text-align: center;
     }
 
     h1 {
-        color: #000;
         font-size: 2.8em;
         font-weight: 100;
         margin-bottom: 0.2em;
@@ -71,8 +71,10 @@ a {
     }
 
     p {
+        line-height: 1.2;
         margin: 0 auto;
-        max-width: 750px;
+        max-width: 650px;
+        padding-bottom: 1.2em;
     }
 }
 
