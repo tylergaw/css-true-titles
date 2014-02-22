@@ -1,10 +1,10 @@
 .bumper-01 {
+    $delay: 15s;
     background: #0e0b06 url("../img/bumper-01-bg.jpg") repeat;
     background-size: cover;
 
     .composition {
-        // @include animation(opener-comp 13s infinite ease alternate);
-        // @include transform(translateX(-4%) scale(1.02));
+        @include animation(bumper-01-comp 20s $delay infinite ease alternate);
         @include mask(url("../img/bumper-01-human.png") top left / cover no-repeat);
     }
 
@@ -25,58 +25,22 @@
     }
 
     .crud {
+        @include animation(bumper-01-crud 25s $delay infinite ease alternate);
         background: transparent url("../img/bumper-01-crud.png") no-repeat;
         background-size: cover;
         opacity: 0.45;
+        @include transform(translateX(200px));
     }
 }
 
-// @include keyframes (opener-copy) {
-//     0%, 100% {
-//         opacity: 0;
-//     }
+@include keyframes (bumper-01-comp) {
+    100% {
+        @include transform(scale(1.1) translateX(-40px));
+    }
+}
 
-//     4%, 96% {
-//         opacity: 1;
-//     }
-
-//     100% {
-//         @include transform(translateX(48%) scale(1.06));
-//     }
-// }
-
-// @include keyframes (opener-comp) {
-//     40% {
-//         opacity: 1;
-//     }
-
-//     40.1%, 40.3%, 40.5%  {
-//         opacity: 0.1;
-//     }
-
-//     40.2%, 40.4%, 40.6% {
-//         opacity: 1;
-//     }
-
-//     100% {
-//         @include transform(translateX(7%) scale(1.08) skewY(2deg));
-//     }
-// }
-
-// @include keyframes (opener-town) {
-//     0%, 40%, 41% {
-//         background-size: 0, cover;
-//     }
-
-//     40.1% {
-//         background-size: 120%, cover;
-//     }
-
-//     50% {
-//         opacity: 0.6;
-//     }
-
-//     100% {
-//         @include transform(translateX(-350px));
-//     }
-// }
+@include keyframes (bumper-01-crud) {
+    100% {
+        @include transform(translateX(-40px));
+    }
+}

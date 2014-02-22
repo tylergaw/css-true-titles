@@ -27,7 +27,7 @@ a {
     width: 100%;
 }
 
-$duration: 36s;
+$duration: 36.5s;
 $iteration: infinite;
 
 @include keyframes (opener) {
@@ -61,21 +61,21 @@ $iteration: infinite;
 }
 
 @include keyframes (photography) {
-    0%, 51.9%, 74%, 100% {
+    0%, 51.9%, 72%, 100% {
         opacity: 0;
     }
 
-    52%, 73.9% {
+    52%, 71.9% {
         opacity: 1;
     }
 }
 
 @include keyframes (twitter) {
-    0%, 73.9%, 100% {
+    0%, 71.9%, 100% {
         opacity: 0;
     }
 
-    74%, 99.9% {
+    72%, 99.9% {
         opacity: 1;
     }
 }
