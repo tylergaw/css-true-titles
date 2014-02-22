@@ -101,6 +101,15 @@ a {
             border-color: #000;
         }
     }
+
+    .big-btn-container {
+        margin-top: 0.8em;
+        text-align: center;
+
+        i {
+            font-size: 0.8em;
+        }
+    }
 }
 
 $duration: 36.54s;
