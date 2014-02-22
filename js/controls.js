@@ -24,8 +24,18 @@
         }
     }
 
-    function toggleVolume () {
-        console.log('mute/unmute');
+    function toggleVolume (e) {
+        var muted = track.volume === 0,
+            target = e.target;
+
+        if (muted) {
+            track.volume = 1;
+            target.textContent = target.getAttribute('data-text');
+        }
+        else {
+            track.volume = 0;
+            target.textContent = target.getAttribute('data-alt-text');
+        }
     }
 
     function controlsClick (e) {
