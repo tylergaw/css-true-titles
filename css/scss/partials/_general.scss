@@ -106,53 +106,63 @@ a {
 $duration: 36.54s;
 $iteration: infinite;
 
+@mixin on {
+    opacity: 1;
+    @include transform(translateX(0));
+}
+
+@mixin off {
+    opacity: 0;
+    @include transform(translateX(-100%))
+}
+
 @include keyframes (opener) {
     0%, 22.9% {
-        opacity: 1;
+        @include on;
     }
 
     23%, 100% {
-        opacity: 0;
+        @include off;
     }
 }
 
 @include keyframes (director) {
     0%, 22.9%, 46%, 100% {
-        opacity: 0;
+        @include off;
     }
 
     23%, 45.9% {
-        opacity: 1;
+        @include on;
     }
 }
 
 @include keyframes (bumper01) {
     0%, 45.9%, 52%, 100% {
-        opacity: 0;
+        @include off;
     }
 
     46%, 51.9% {
-        opacity: 1;
+        @include on;
     }
 }
 
 @include keyframes (photography) {
     0%, 51.9%, 71%, 100% {
-        opacity: 0;
+        @include off;
     }
 
     52%, 70.9% {
-        opacity: 1;
+        @include on;
     }
 }
 
 @include keyframes (twitter) {
     0%, 70.9%, 100% {
-        opacity: 0;
+        @include off;
     }
 
     71%, 99.9% {
-        opacity: 1;
+        @include on;
     }
 }
 
