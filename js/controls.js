@@ -2,15 +2,19 @@
     var body = document.querySelector('body'),
         controls = document.querySelector('.controls');
 
-    function togglePlay () {
+    function togglePlay (e) {
         var className = 'paused',
-            isPaused = body.classList.contains(className);
+            isPaused = body.classList.contains(className),
+            target = e.target;
 
         if (isPaused) {
+            body.classList.remove('first-play');
             body.classList.remove(className);
+            target.textContent = target.getAttribute('data-alt-text');
         }
         else {
             body.classList.add(className);
+            target.textContent = target.getAttribute('data-text');
         }
     }
 
@@ -25,10 +29,10 @@
             cl = target.classList;
 
         if (cl.contains('play-toggle')) {
-            togglePlay();
+            togglePlay(e);
         }
         else if (cl.contains('mute-toggle')) {
-            toggleVolume();
+            toggleVolume(e);
         }
     }
 

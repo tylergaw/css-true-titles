@@ -5,7 +5,7 @@ html, body, .titles {
 }
 
 html, body {
-    background: #0c0c0a url("../img/opener-bg.jpg") no-repeat;
+    background: #0c0c0a url("../img/director-bg.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -25,6 +25,12 @@ a {
     }
 
     width: 100%;
+}
+
+.first-play {
+    .titles {
+        opacity: 0;
+    }
 }
 
 $duration: 36.54s;

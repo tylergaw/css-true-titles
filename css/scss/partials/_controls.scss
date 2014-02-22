@@ -1,15 +1,40 @@
 .controls {
-    background-color: rgba(#000, 0.8);
+    background-color: rgba(#000, 0.9);
+    @include box-sizing(border-box);
     bottom: 0;
+    padding: 0.3em;
     position: fixed;
     width: 100%;
     z-index: 900;
 }
 
+.btn {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid rgba(#f1f1f1, 0.5);
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    font-size: 0.8em;
+    font-weight: 100;
+    letter-spacing: 0.07em;
+    padding: 0.2em 0.6em 0.1em 0.6em;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        border-color: #fff;
+        outline: none;
+    }
+}
+
 .project-crud {
     display: inline-block;
     position: absolute;
-    right: 0;
+    right: 0.6em;
 
     a {
         color: #d8d3d2;
