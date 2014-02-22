@@ -2,6 +2,8 @@
 
 A title sequence made with CSS in the style of the [True Detective opening titles](http://youtu.be/ZRPpCqXYoos).
 
+![Image showing the title cards](https://raw.github.com/tylergaw/css-true-titles/master/img/true-titles-tiles.jpg)
+
 ## Problems
 
  * CSS `mask` support is currently limited to blink/webkit. I'm only seeing it
