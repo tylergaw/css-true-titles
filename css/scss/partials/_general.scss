@@ -1,4 +1,4 @@
-$dev-mode: true;
+$dev-mode: false;
 
 html, body, .titles {
     height: 100%;
@@ -163,7 +163,7 @@ $iteration: infinite;
     letter-spacing: 0.07em;
     position: relative;
     text-transform: uppercase;
-    z-index: 10;
+    z-index: 90;
 }
 
 .composition {

@@ -14,7 +14,7 @@
     }
 
     .copy {
-        @include animation(twitter-copy 16s $delay infinite linear alternate);
+        @include animation(twitter-copy 14s $delay infinite linear alternate);
         opacity: 0;
         text-align: center;
         top: 40vh;
@@ -29,7 +29,7 @@
     }
 
     .sky {
-        @include animation(twitter-sky 17s $delay infinite linear alternate);
+        @include animation(twitter-sky 16s $delay infinite linear alternate);
         background: transparent url("../img/twitter-sky.png") no-repeat center top;
         background-size: cover;
         max-height: 450px;
@@ -44,11 +44,22 @@
     }
 
     .ground {
-        @include animation(twitter-ground 17s $delay infinite linear alternate);
+        @include animation(twitter-ground 16s $delay infinite linear alternate);
         background: transparent url("../img/twitter-ground.png") no-repeat center bottom;
         background-size: cover;
         bottom: 0;
         max-height: 425px;
+    }
+
+    @media screen and (min-width: 1100px) {
+         .sky {
+            max-height: 600px;
+         }
+
+         .ground {
+            bottom: -120px;
+            max-height: 575px;
+         }
     }
 }
 

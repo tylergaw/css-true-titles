@@ -15,8 +15,15 @@
     .copy {
         @include animation(director-copy 17s $delay infinite linear alternate);
         left: 60vw;
-        top: 47%;
+        top: 48%;
         width: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .copy {
+            left: 50vw;
+            top: 45%;
+        }
     }
 
     .composition {
