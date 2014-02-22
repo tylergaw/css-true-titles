@@ -5,6 +5,12 @@
 
     a {
         color: #616d59;
+
+        &:hover,
+        &:focus {
+            color: #d578ba;
+            outline: none;
+        }
     }
 
     .copy {
