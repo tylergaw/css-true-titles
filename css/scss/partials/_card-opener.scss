@@ -30,7 +30,7 @@
     }
 
     .town {
-        @include animation(opener-town 11s infinite linear);
+        @include animation(opener-town 11s infinite linear alternate);
         background-color: transparent;
         background-repeat: no-repeat;
         background-image: url("../img/opener-blip.jpg"), url("../img/opener-town.png");

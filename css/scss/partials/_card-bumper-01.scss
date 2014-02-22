@@ -1,10 +1,10 @@
 .bumper-01 {
-    $delay: 15s;
+    $delay: 16s;
     background: #0e0b06 url("../img/bumper-01-bg.jpg") repeat;
     background-size: cover;
 
     .composition {
-        @include animation(bumper-01-comp 20s $delay infinite ease alternate);
+        @include animation(bumper-01-comp 21s $delay infinite ease alternate);
         @include mask(url("../img/bumper-01-human.png") top left / cover no-repeat);
     }
 
@@ -25,7 +25,7 @@
     }
 
     .crud {
-        @include animation(bumper-01-crud 25s $delay infinite ease alternate);
+        @include animation(bumper-01-crud 28s $delay infinite ease alternate);
         background: transparent url("../img/bumper-01-crud.png") no-repeat;
         background-size: cover;
         opacity: 0.45;
@@ -41,6 +41,6 @@
 
 @include keyframes (bumper-01-crud) {
     100% {
-        @include transform(translateX(-40px));
+        @include transform(translateX(-18px));
     }
 }
