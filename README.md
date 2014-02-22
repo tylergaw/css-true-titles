@@ -15,6 +15,7 @@ A title sequence made with CSS in the style of the [True Detective opening](http
  around. Those big raster images and masks flake out from time to time.
  * File size. I'm using a number of large images with transparency so the page
  weight is about 4.3 MB. Ouch.
+ * Crashes Mobile Safari and Chrome for iOS pretty consistently.
 
 
 ## Reference
