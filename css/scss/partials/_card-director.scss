@@ -10,6 +10,10 @@
 
     a {
         color: #626963;
+
+        &:hover {
+            color: #aa250f;
+        }
     }
 
     .copy {

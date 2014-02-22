@@ -13,7 +13,7 @@
             else {
                 track.pause();
             }
-        }, 100);
+        }, 50);
     }
 
     function togglePlay (e) {
