@@ -39,7 +39,7 @@
     }
 
     function controlsClick (e) {
-        e.preventDefault();
+        // e.preventDefault();
 
         var target = e.target,
             cl = target.classList;
