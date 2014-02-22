@@ -1,20 +1,26 @@
 (function () {
     var body = document.querySelector('body'),
-        controls = document.querySelector('.controls');
+        controls = document.querySelector('.controls'),
+        track = document.getElementById('audio-track');
 
     function togglePlay (e) {
-        var className = 'paused',
-            isPaused = body.classList.contains(className),
+        var classPaused = 'paused',
+            classPlaying = 'playing',
+            isPaused = body.classList.contains(classPaused),
             target = e.target;
 
         if (isPaused) {
             body.classList.remove('first-play');
-            body.classList.remove(className);
+            body.classList.remove(classPaused);
+            body.classList.add(classPlaying);
             target.textContent = target.getAttribute('data-alt-text');
+            track.play();
         }
         else {
-            body.classList.add(className);
+            body.classList.add(classPaused);
+            body.classList.remove(classPlaying);
             target.textContent = target.getAttribute('data-text');
+            track.pause();
         }
     }
 

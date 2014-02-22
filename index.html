@@ -22,7 +22,8 @@
     -->
     </head>
     <body class="first-play paused">
-        <div class="info">
+        <div role="contentinfo">
+            <h1>True Detective Style CSS Title Sequence</h1>
             This is some info about this crud
         </div>
         <div class="controls">
@@ -81,6 +82,12 @@
                 </h3>
             </li>
         </ol>
+
+        <audio id="audio-track" preload="auto" loop>
+            <source src="audio/true-titles.ogg">
+            <source src="audio/true-titles.mp3">
+        </audio>
+
         <script src="js/controls.js"></script>
     </body>
 </html>
