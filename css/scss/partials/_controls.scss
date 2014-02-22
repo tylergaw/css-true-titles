@@ -32,14 +32,18 @@
 }
 
 .project-crud {
+    color: #d8d3d2;
     display: inline-block;
+    padding-top: 0.25em;
     position: absolute;
     right: 0.6em;
 
     a {
         color: #d8d3d2;
+        display: inline-block;
         font-family: georgia, times, serif;
         font-size: 0.8rem;
+        padding: 0 0.4em;
         text-transform: uppercase;
     }
 }

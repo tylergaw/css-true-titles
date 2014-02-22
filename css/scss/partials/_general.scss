@@ -76,6 +76,19 @@ a {
         max-width: 650px;
         padding-bottom: 1.2em;
     }
+
+    .big-play-btn {
+        border-color: rgba(#1f1f1f, 0.8);
+        color: #000;
+        display: block;
+        font-size: 1.6em;
+        margin: 0 auto;
+
+        &:hover,
+        &:focus {
+            border-color: #000;
+        }
+    }
 }
 
 $duration: 36.54s;

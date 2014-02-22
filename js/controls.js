@@ -53,4 +53,10 @@
 
     document.getElementById('play-toggle').addEventListener('click', togglePlay);
     document.getElementById('mute-toggle').addEventListener('click', toggleVolume);
+
+    // man-handle the big play button a bit.
+    document.getElementById('big-play-btn').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementById('play-toggle').click();
+    });
 }());
