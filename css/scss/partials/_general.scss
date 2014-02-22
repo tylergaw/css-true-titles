@@ -155,6 +155,7 @@ $iteration: infinite;
 .paused {
     .animated,
     .title-card .animated {
+        -webkit-animation-play-state: paused;
         animation-play-state: paused;
     }
 }
