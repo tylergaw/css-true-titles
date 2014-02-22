@@ -5,12 +5,16 @@ html, body, .titles {
 }
 
 html, body {
-    background-color: #0c0c0a;
+    background-color: #dededd;
 }
 
 a {
     display: inline-block;
     text-decoration: none;
+}
+
+.titles {
+    visibility: visible;
 }
 
 .title-card {
@@ -28,7 +32,7 @@ a {
 
 .first-play {
     .titles {
-        opacity: 0;
+        visibility: hidden;
     }
 
     [role="contentinfo"] {
@@ -38,17 +42,37 @@ a {
 
 [role="contentinfo"] {
     @include box-sizing(border-box);
+    color: #626963;
     display: none;
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
     padding: 0.8em 1.1em;
+    position: absolute;
+    width: 100%;
+
+    a {
+        text-decoration: underline;
+    }
+
+    header {
+        margin-bottom: 2em;
+        text-align: center;
+    }
 
     h1 {
-        color: #fff;
-        font-family: "Helvetica Neue", helvetica, arial, sans-serif;
-        font-size: 2.4em;
+        color: #000;
+        font-size: 2.8em;
         font-weight: 100;
-        letter-spacing: 0.05em;
-        text-align: center;
-        text-transform: uppercase;
+        margin-bottom: 0.2em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        font-weight: 300;
+    }
+
+    p {
+        margin: 0 auto;
+        max-width: 750px;
     }
 }
 

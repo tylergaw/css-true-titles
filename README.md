@@ -1,6 +1,6 @@
 # CSS True Titles
 
-A title sequence made with CSS in the style of the [True Detective opening titles](http://youtu.be/ZRPpCqXYoos).
+A title sequence made with CSS in the style of the [True Detective opening](http://youtu.be/ZRPpCqXYoos).
 
 ![Image showing the title cards](https://raw.github.com/tylergaw/css-true-titles/master/img/true-titles-tiles.jpg)
 
@@ -11,6 +11,8 @@ A title sequence made with CSS in the style of the [True Detective opening title
  [http://caniuse.com/css-masks](http://caniuse.com/css-masks)
  * High Res/Retina displays hate this demo. I think it's just too much moving
  around. Those big raster images and masks flake out from time to time.
+ * File size. I'm using a number of large images with transparency so the page
+ weight is about 4.3 MB. Ouch.
 
 
 ## Reference
@@ -26,3 +28,8 @@ A title sequence made with CSS in the style of the [True Detective opening title
   small, however using it is also tricky. It's much harder to have things appear
   exactely how you want. You kind of have to let go and allow the browser to do
   what it wants.
+  * When moving things with CSS always use `translate` in place of updating
+  left/right/top/bottom position or `background-position`. Paul said it
+  [here](http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/)
+  On this demo I saw it first hand. When not using `translate` animations were
+  choppy and CPU usage was through the roof.

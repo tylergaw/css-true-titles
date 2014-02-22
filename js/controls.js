@@ -2,6 +2,20 @@
     var body = document.getElementsByTagName('body')[0],
         track = document.getElementById('audio-track');
 
+    // Pretty hacky here. The CSS animations take a short time to start/stop on
+    // play/pause, but the audio starts immediately. Using this to make sure
+    // the audio and animations stay in sync.
+    function delayPlayToggle (action) {
+        setTimeout(function () {
+            if (action === 'play') {
+                track.play();
+            }
+            else {
+                track.pause();
+            }
+        }, 100);
+    }
+
     function togglePlay (e) {
         var classPaused = 'paused',
             classPlaying = 'playing',
@@ -14,12 +28,12 @@
             body.classList.remove('first-play');
             body.classList.remove(classPaused);
             target.textContent = target.getAttribute('data-alt-text');
-            track.play();
+            delayPlayToggle('play');
         }
         else {
             body.classList.add(classPaused);
             target.textContent = target.getAttribute('data-text');
-            track.pause();
+            delayPlayToggle('pause');
         }
     }
 
