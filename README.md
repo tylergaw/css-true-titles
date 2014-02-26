@@ -4,6 +4,9 @@ A title sequence made with CSS in the style of the [True Detective opening](http
 
 [http://lab.tylergaw.com/css-true-titles/](http://lab.tylergaw.com/css-true-titles)
 
+I wrote an article talking in more detail about the masking and animations. It lives
+here: [http://tylergaw.com/articles/css-true-titles](http://tylergaw.com/articles/css-true-titles)
+
 ![Image showing the title cards](https://raw.github.com/tylergaw/css-true-titles/master/img/true-titles-tiles.jpg)
 
 ## Problems
